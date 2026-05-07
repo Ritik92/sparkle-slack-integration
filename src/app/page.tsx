@@ -9,7 +9,7 @@ export default function Home() {
 			<main className="mx-auto max-w-3xl px-6 py-20 sm:py-24">
 				<div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground">
 					<span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-					Slack integration prototype for{" "}
+					Slack integration prototype for{"-"}
 					<a
 						href="https://sparkles.dev"
 						className="text-foreground hover:underline"
@@ -21,13 +21,13 @@ export default function Home() {
 				</div>
 
 				<h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-					Ship code from Slack.
+					hello
 				</h1>
 				<p className="mt-4 max-w-xl text-balance text-lg text-muted-foreground">
-					Type{" "}
+					Type{"-"}
 					<code className="rounded bg-muted px-1.5 py-0.5 font-mono text-sm text-foreground">
 						/ship change the hero copy to &ldquo;hello&rdquo;
-					</code>{" "}
+					</code>{"-"}
 					in any Slack channel. A real PR gets opened on your repo via Claude. Reviewed by humans, merged when good.
 				</p>
 
@@ -66,10 +66,10 @@ export default function Home() {
 					</h2>
 					<p className="text-balance text-sm leading-relaxed text-muted-foreground">
 						Sparkles&apos; CEO posted that Slack integration was on the next-version roadmap. This is a working
-						prototype on the same template stack — drop the{" "}
+						prototype on the same template stack — drop the{"-"}
 						<code className="rounded bg-muted px-1 py-0.5 font-mono text-xs text-foreground">
 							/api/slack/events
-						</code>{" "}
+						</code>{"-"}
 						route handler and the four lib files into the real repo and it lights up.
 					</p>
 				</section>
@@ -92,7 +92,7 @@ export default function Home() {
 
 				<footer className="mt-16 flex items-center justify-between border-t border-border pt-6 text-sm text-muted-foreground">
 					<span>
-						Built by{" "}
+						Built by{"-"}
 						<a
 							href={`https://github.com/${GITHUB_HANDLE}`}
 							className="text-foreground hover:underline"
