@@ -53,3 +53,6 @@ next-env.d.ts
 
 # pitch notes — do not push
 PITCH.md
+
+# claude code local settings
+.claude/
