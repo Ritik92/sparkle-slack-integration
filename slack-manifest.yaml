@@ -1,0 +1,23 @@
+display_information:
+  name: Sparkles Slack
+  description: Ship code changes from Slack via natural language
+  background_color: "#0f0f0f"
+features:
+  bot_user:
+    display_name: Sparkles Slack
+    always_online: true
+  slash_commands:
+    - command: /ship
+      url: https://REPLACE-WITH-YOUR-TUNNEL-OR-WORKERS-DEV-URL/api/slack/events
+      description: Ship a code change as a PR
+      usage_hint: "[describe the change]"
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - chat:write
+      - commands
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

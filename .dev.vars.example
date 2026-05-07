@@ -1,0 +1,12 @@
+# Slack — from api.slack.com/apps → your app
+SLACK_SIGNING_SECRET=
+SLACK_BOT_TOKEN=xoxb-
+
+# GitHub — fine-grained PAT scoped to your test repo
+# Permissions: Contents read+write, Pull requests read+write
+GITHUB_TOKEN=
+GITHUB_OWNER=
+GITHUB_REPO=
+
+# Anthropic — console.anthropic.com → API Keys
+ANTHROPIC_API_KEY=

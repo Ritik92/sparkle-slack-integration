@@ -1,0 +1,48 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "template-project",
+	"main": ".open-next/worker.js",
+	"compatibility_date": "2025-12-01",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".open-next/assets"
+	},
+	"images": {
+		// Enable image optimization
+		// see https://opennext.js.org/cloudflare/howtos/image
+		"binding": "IMAGES"
+	},
+	"services": [
+		{
+			// Self-reference service binding, the service name must match the worker name
+			// see https://opennext.js.org/cloudflare/caching
+			"binding": "WORKER_SELF_REFERENCE",
+			"service": "template-project"
+		}
+	],
+	"observability": {
+		"enabled": true
+	},
+	/**
+	 * Non-secret env vars. The owner/repo of the GitHub repo this worker writes PRs against.
+	 * Secrets (SLACK_*, GITHUB_TOKEN, ANTHROPIC_API_KEY) are set via:
+	 *   bunx wrangler secret put <NAME>
+	 * For local dev, all of them go in .dev.vars (gitignored).
+	 */
+	"vars": {
+		"GITHUB_OWNER": "",
+		"GITHUB_REPO": ""
+	}
+}
